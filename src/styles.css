@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.card{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+margin-top: 20vh;
+margin-bottom:5vh ;}
+body{
+    background-color: rgb(196, 195, 195);
+}
+span{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+h2{
+    align-self: center;
+}
