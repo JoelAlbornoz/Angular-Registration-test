@@ -8,7 +8,11 @@ socket.on('connect', ()=>{
 })
 
 socket.on("press", (io) => {
-  console.log("nos presionan")
+  console.log("boton presionado")
+})
+
+socket.on('refreshGrid', (data) => {
+  console.log(data)
 })
 
 //var req = new XMLHttpRequest();
@@ -35,7 +39,8 @@ export class AppComponent {
 
   presion(){
    socket.emit('presionado');
-   console.log('enviar')
+   console.log('enviar');
+   socket.emit('changeGrid', [0,0])
   }
 }
 
