@@ -15,3 +15,11 @@ span{
 h2{
     align-self: center;
 }
+
+.boton-negro{
+    background-color: black;
+}
+
+.boton-blanco{
+    background-color: white;
+}

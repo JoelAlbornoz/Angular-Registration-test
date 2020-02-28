@@ -1,0 +1,3 @@
+<div *ngFor='let array of grid; let i = index'  >
+<button *ngFor='let celda of array; let j = index'  (click)='evento([i,j])' class="btn" [ngClass]="{'btn-primary':celda, 'btn-danger':!celda}"> {{i}} {{j}} = {{celda}}</button>
+</div>

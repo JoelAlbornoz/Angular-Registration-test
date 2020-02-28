@@ -1,19 +1,7 @@
 import { Component } from '@angular/core';
-import * as io from 'socket.io-client'
+import { WebSocketService } from './web-socket.service'
 
-var url='https://jade-holistic-cirrus.glitch.me/';
-var socket = io(url);
-socket.on('connect', ()=>{
-  console.log("conectado")
-})
 
-socket.on("press", (io) => {
-  console.log("boton presionado")
-})
-
-socket.on('refreshGrid', (data) => {
-  console.log(data)
-})
 
 //var req = new XMLHttpRequest();
 //req.open('GET', 'https://jade-holistic-cirrus.glitch.me/', true);
@@ -33,15 +21,26 @@ socket.on('refreshGrid', (data) => {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'ang';
+  socket:WebSocketService;
 
-
-  presion(){
-   socket.emit('presionado');
-   console.log('enviar');
-   socket.emit('changeGrid', [0,0])
+  constructor(socket:WebSocketService = new WebSocketService){
+    this.socket = socket;
   }
+  ngOnInit(){
+    
+  }
+  //counter = 1
+  presion = (data) =>{
+    console.log(data + typeof data)
+    this.socket.emit("presionado", null)
+    //console.log('enviar');
+    this.socket.emit('changeGrid', data)
+    //this.counter = this.counter +1;
+   }
+  
 }
 
  
