@@ -1,7 +1,1 @@
-
-<style>
-  
-</style>
-<nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" routerLink="/listadoclientes" >Listado Cliente</a><a class="navbar-brand" routerLink="/altaclientes">Alta de Clientes</a></nav>
-<router-outlet></router-outlet>
-<button (click)="this.presion()">Emitir evento</button>
+<app-grid [grid]="socket.grid" [evento]='presion'></app-grid>

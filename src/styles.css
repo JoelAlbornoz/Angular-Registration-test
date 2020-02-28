@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 .card{
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -14,4 +15,12 @@ span{
 }
 h2{
     align-self: center;
+}
+
+.boton-negro{
+    background-color: black;
+}
+
+.boton-blanco{
+    background-color: white;
 }

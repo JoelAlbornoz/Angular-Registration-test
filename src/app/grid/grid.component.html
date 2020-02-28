@@ -1,0 +1,5 @@
+<div>
+    <div *ngFor='let array of grid; let i = index'  >
+    <button *ngFor='let celda of array; let j = index'  (click)='evento([i,j])' class="box" [ngClass]="{'box-tg':celda}"></button>
+    </div>
+</div>
